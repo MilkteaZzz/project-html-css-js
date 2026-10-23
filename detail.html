@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata & Detail - Project Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahan style khusus untuk tabel biodata agar rapi */
+        .bio-table {
+            width: 100%;
+            margin: 20px 0;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        .bio-table th, .bio-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 0.95rem;
+        }
+        .bio-table th {
+            color: #4a5568;
+            width: 35%;
+        }
+        .bio-table td {
+            color: #2d3748;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">🚀 WebProject</div>
+        <nav>
+            <a href="index.html">Beranda</a>
+        </nav>
+    </header>
+
+    <!-- Konten Utama Halaman Detail / Biodata -->
+    <main class="container">
+        <section class="card" style="max-width: 550px;">
+            <h1>Biodata Mahasiswa 👨‍💻</h1>
+            <p>Berikut adalah informasi data diri dan perkuliahan:</p>
+            
+            <!-- Tabel Biodata -->
+            <table class="bio-table">
+                <tr>
+                    <th>Nama</th>
+                    <td>Wahyu Saputro</td>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <th>Mata Kuliah</th>
+                    <td>Pemrograman Web</td>
+                </tr>
+                <tr>
+                    <th>Semester</th>
+                    <td>III</td>
+                </tr>
+            </table>
+            
+            <!-- Tombol Kembali dengan ID agar bisa dikontrol JavaScript -->
+            <div style="margin-top: 25px;">
+                <button id="back-btn" class="btn">⬅️ Kembali ke Beranda</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Dibuat dengan semangat oleh Wahyu &copy; 2026</p>
+    </footer>
+
+    <!-- Script untuk Tombol Kembali -->
+    <script>
+        const backButton = document.getElementById('back-btn');
+
+        backButton.addEventListener('click', function() {
+            // Efek interaktif sebelum kembali ke index.html
+            backButton.textContent = 'Kembali...';
+            backButton.style.backgroundColor = '#48bb78';
+            
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 300);
+        });
+    </script>
+
+</body>
+</html>
