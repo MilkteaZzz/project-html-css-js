@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Muhammad Rizal naufal akbar</title>
+    <style>
+        /* Styling Modern & User-Friendly */
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header dengan Efek Visual Menarik */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.05rem;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navigasi Sticky yang Nyaman */
+        nav {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #eff6ff;
+            color: var(--primary-dark);
+        }
+
+        /* Konten Utama */
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* Tabel Estetik & Responsif */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Form Interaktif */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #334155;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Styling Modal / Pop-up */
+        .modal-overlay {
+            display: none; /* Sembunyikan secara default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .modal-body p {
+            margin: 10px 0;
+            word-break: break-word;
+        }
+
+        .modal-close-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        .modal-close-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+            header {
+                padding: 25px 15px;
+            }
+            section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header (<header>) -->
+    <header>
+        <h1>Profil Mahasiswa D3 Semester 3</h1>
+        <p><strong>Nama:</strong> Muhammad Rizal naufal akbar</p>
+        <p><strong>NIM:</strong> 2556402013</p>
+        <img src="fotorizal.jpeg" alt="Foto Resmi rizal naufal akbar" class="profile-img">
+    </header>
+
+    <!-- 2. Navigasi (<nav>) -->
+    <nav>
+        <a href="#biodata">Biodata</a>
+        <a href="#riwayat">Riwayat & Minat</a>
+        <a href="#jadwal">Jadwal Kuliah</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <!-- 3. Konten Utama (<main>) -->
+    <main>
+
+        <!-- 4. Seksi Profil & Minat (<section id="biodata">) -->
+        <section id="biodata">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya adalah mahasiswa program studi Diploma 3 Teknik Komputer</p>
+            <h3>Daftar Minat & Bakat</h3>
+            <ul>
+                <li>Pemrograman Web (PHP, CodeIgniter, Laravel)</li>
+                <li>Manajemen & Optimalisasi Basis Data (MySQL / MariaDB)</li>
+                <li>Desain Antarmuka Pengguna & Sistem Responsif</li>
+            </ul>
+        </section>
+
+        <!-- Seksi Riwayat Akademik -->
+        <section id="riwayat">
+            <h2>Riwayat Akademik</h2>
+            <p>Berikut adalah ringkasan status akademik saat ini:</p>
+            <ul>
+                <li><strong>Jenjang:</strong> Diploma 3 (D3)[cite: 4]</li>
+                <li><strong>Semester:</strong> 3 (Tiga)[cite: 4]</li>
+                <li><strong>Status:</strong> Aktif</li>
+            </ul>
+        </section>
+
+        <!-- 5. Seksi Jadwal Kuliah & Tabel (<section id="jadwal">) -->
+        <section id="jadwal">
+            <h2>Jadwal Kuliah Semester Berjalan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Mata Kuliah</th>
+                        <th>Jam</th>
+                        <th>Ruangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin</td>
+                        <td>Pemrograman Web</td>
+                        <td>08:00 - 10:30</td>
+                        <td>Lab Komputer 2</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>Basis Data Lanjut</td>
+                        <td>10:30 - 13:00</td>
+                        <td>Ruang 302</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat</td>
+                        <td>Algoritma & Struktur Data</td>
+                        <td>13:30 - 16:00</td>
+                        <td>Lab Komputer 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 6. Seksi Formulir Kontak Interaktif (<section id="kontak">) -->
+        <section id="kontak">
+            <h2>Formulir Kontak</h2>
+            <p>Silakan isi formulir di bawah ini untuk mengirimkan pesan atau pertanyaan:</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nama-pengirim">Nama Lengkap:</label>
+                    <input type="text" id="nama-pengirim" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email-pengirim">Alamat Email:</label>
+                    <input type="email" id="email-pengirim" name="email" placeholder="nama@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="kategori-pesan">Keperluan:</label>
+                    <select id="kategori-pesan" name="kategori">
+                        <option value="Diskusi Proyek">Diskusi Proyek</option>
+                        <option value="Urusan Akademik">Urusan Akademik</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                </div>
+                
+                <button type="submit">Kirim Pesan 🚀</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Komponen Pop-up (Modal) Hasil Input -->
+    <div id="result-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Pesan Berhasil Dikirim! 🎉</h3>
+            <p>Berikut adalah ringkasan data yang Anda masukkan:</p>
+            <div class="modal-body">
+                <p><strong>Nama:</strong> <span id="modal-nama"></span></p>
+                <p><strong>Email:</strong> <span id="modal-email"></span></p>
+                <p><strong>Keperluan:</strong> <span id="modal-kategori"></span></p>
+                <p><strong>Pesan:</strong> <span id="modal-pesan"></span></p>
+            </div>
+            <button id="close-modal-btn" class="modal-close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- 7. Footer (<footer>) -->
+    <footer>
+        <p>&copy; 2026 Muhammad Rizal Naufal Akbar. D3 Teknik Informatika / Sistem Informasi.</p>
+        <p>Email Kampus: <a href="mailto:muhammad.rizalnaufalakbar@gmail.com">muhammad.rizalnaufalakbar@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript untuk Menangani Pop-up -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('result-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        const modalNama = document.getElementById('modal-nama');
+        const modalEmail = document.getElementById('modal-email');
+        const modalKategori = document.getElementById('modal-kategori');
+        const modalPesan = document.getElementById('modal-pesan');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah halaman melakukan reload
+
+            // Ambil nilai dari input form
+            modalNama.textContent = document.getElementById('nama-pengirim').value;
+            modalEmail.textContent = document.getElementById('email-pengirim').value;
+            modalKategori.textContent = document.getElementById('kategori-pesan').value;
+            modalPesan.textContent = document.getElementById('pesan').value;
+
+            // Tampilkan modal
+            modal.style.display = 'flex';
+        });
+
+        // Tombol tutup modal
+        closeModalBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            form.reset(); // Mengosongkan kembali form setelah ditutup
+        });
+
+        // Tutup modal jika pengguna mengklik area di luar kotak modal
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                form.reset();
+            }
+        });
+    </script>
+
+</body>
+</html>

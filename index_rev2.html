@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Wahyu Saputro</title>
+</head>
+<body>
+
+    <!-- 1. Header (<header>): Judul Utama, Identitas, dan Foto Profil -->
+    <header>
+        <h1>Profil Mahasiswa D3 Semester 3</h1>
+        <p><strong>Nama:</strong> Muhammad Rizal naufal akbar</p>
+        <p><strong>NIM:</strong> 2556402013</p>
+        <!-- Atribut alt digunakan untuk aksesibilitas -->
+        <img src="fotorizal.jpeg" alt="Foto Resmi rizal naufal akbar" width="150">
+    </header>
+
+    <!-- 2. Navigasi (<nav>): Tautan internal antar seksi -->
+    <nav>
+        <a href="#biodata">Biodata</a> | 
+        <a href="#riwayat">Riwayat & Minat</a> | 
+        <a href="#jadwal">Jadwal Kuliah</a> | 
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <!-- 3. Konten Utama (<main>) -->
+    <main>
+
+        <!-- 4. Seksi Profil & Minat (<section id="biodata">) -->
+        <section id="biodata">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya adalah mahasiswa program studi Diploma 3 Teknik Komputer / Sistem Informasi yang memiliki ketertarikan mendalam pada pengembangan web, basis data, dan sistem informasi akademis.</p>
+            
+            <h3>Daftar Minat & Bakat</h3>
+            <ul>
+                <li>Pemrograman Web (PHP, CodeIgniter, Laravel)</li>
+                <li>Manajemen & Optimalisasi Basis Data (MySQL / MariaDB)</li>
+                <li>Desain Antarmuka Pengguna & Sistem Responsif</li>
+            </ul>
+        </section>
+
+        <!-- Seksi Riwayat Akademik -->
+        <section id="riwayat">
+            <h2>Riwayat Akademik</h2>
+            <p>Berikut adalah ringkasan status akademik saat ini:</p>
+            <ul>
+                <li><strong>Jenjang:</strong> Diploma 3 (D3)[cite: 4]</li>
+                <li><strong>Semester:</strong> 3 (Tiga)[cite: 4]</li>
+                <li><strong>Status:</strong> Aktif</li>
+            </ul>
+        </section>
+
+        <!-- 5. Seksi Jadwal Kuliah & Tabel (<section id="jadwal">) -->
+        <section id="jadwal">
+            <h2>Jadwal Kuliah Semester Berjalan</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Mata Kuliah</th>
+                        <th>Jam</th>
+                        <th>Ruangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin</td>
+                        <td>Pemrograman Web</td>
+                        <td>08:00 - 10:30</td>
+                        <td>Lab Komputer 2</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>Basis Data Lanjut</td>
+                        <td>10:30 - 13:00</td>
+                        <td>Ruang 302</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat</td>
+                        <td>Algoritma & Struktur Data</td>
+                        <td>13:30 - 16:00</td>
+                        <td>Lab Komputer 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 6. Seksi Formulir Kontak Interaktif (<section id="kontak">) -->
+        <section id="kontak">
+            <h2>Formulir Kontak</h2>
+            <p>Silakan isi formulir di bawah ini untuk mengirimkan pesan atau pertanyaan:</p>
+            <form action="#" method="POST">
+                <div>
+                    <label for="nama-pengirim">Nama Lengkap:</label><br>
+                    <input type="text" id="nama-pengirim" name="nama" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email-pengirim">Alamat Email:</label><br>
+                    <input type="email" id="email-pengirim" name="email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="kategori-pesan">Keperluan:</label><br>
+                    <select id="kategori-pesan" name="kategori">
+                        <option value="diskusi">Diskusi Proyek</option>
+                        <option value="akademik">Urusan Akademik</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="pesan">Pesan:</label><br>
+                    <textarea id="pesan" name="pesan" rows="4" cols="30" required></textarea>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Kirim Pesan</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 7. Footer (<footer>) -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 muhammad Rizal Naufal AKbar. D3 Teknik Informatika / Sistem Informasi.</p>
+        <p>Email Kampus: <a href="mailto:muhammad.rizalnaufalakbar@gmail.com">muhammad.rizalnaufalakbar@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

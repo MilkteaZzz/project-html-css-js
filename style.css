@@ -66,7 +66,7 @@ body {
 
 /* Tombol */
 .btn {
-    background-color: #3498db;
+    background-color: #7898db;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -77,7 +77,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: #9080b9;
 }
 
 /* Footer */

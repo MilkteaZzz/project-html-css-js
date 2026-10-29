@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Diri - Wahyu Saputro</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="style_rev1.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi (Flexbox) -->
+    <header class="navbar">
+        <div class="logo">m.rizal naufal akbar</div>
+        <nav class="nav-links">
+            <a href="#about">Tentang</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#projects">Proyek</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="about" class="hero-section">
+            <div class="profile-container">
+                <!-- Pastikan file gambar fotowawhyu.JPEG ada di folder yang sama -->
+                <img src="fotorizal.jpeg" alt="Foto Profil rizal" class="profile-img">
+            </div>
+            <h1 class="hero-title">Muhammad Rizal naufal akbar</h1>
+            <p class="hero-subtitle">Web Developer & data engineer</p>
+            <p class="hero-description">
+                Halo! Saya seorang pengembang web dan data engineer.
+            </p>
+        </section>
+
+        <!-- Galeri Keahlian & Proyek (CSS Grid) -->
+        <section id="projects" class="portfolio-section">
+            <h2 class="section-title">Proyek & Keahlian</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Pengembangan aplikasi berbasis web menggunakan PHP, CodeIgniter, Laravel, dan HTML/CSS/JS.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🗄️</div>
+                    <h3>Database Management</h3>
+                    <p>Merancang dan mengoptimalkan basis data relasional dengan MySQL dan MariaDB.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Membuat tampilan web adaptif yang nyaman diakses dari komputer desktop maupun smartphone.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐍</div>
+                    <h3>Python Scripting</h3>
+                    <p>Otomatisasi pengolahan data, migrasi basis data, dan pembuatan skrip backend dengan Python.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 rizal naufal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
